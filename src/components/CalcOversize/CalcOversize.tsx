@@ -1,5 +1,5 @@
 import { FC } from "react";
 
-export const oversizeCalc: FC = () => {
+export const CalcOversize: FC = () => {
   return <div></div>;
 };
