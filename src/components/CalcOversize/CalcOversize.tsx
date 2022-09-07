@@ -1,5 +1,10 @@
 import { FC } from "react";
 
 export const CalcOversize: FC = () => {
-  return <div></div>;
+  return (
+    <div>
+      <p>Height: </p>
+      <p>Weight: </p>
+    </div>
+  );
 };
