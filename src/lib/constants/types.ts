@@ -6,5 +6,5 @@ export enum SEX_TYPE {
 export interface CalcOversizeProps {
   sex?: SEX_TYPE;
   height: number;
-  mass: number;
+  weight: number;
 }

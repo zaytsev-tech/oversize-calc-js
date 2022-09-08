@@ -1,13 +1,13 @@
 import { MAN_SIZES } from "../constants/sizeArrays";
 import { CalcOversizeProps } from "../constants/types";
 
-export function searchMaleOversize({ sex, height, mass }: CalcOversizeProps) {
+export function searchMaleOversize({ sex, height, weight }: CalcOversizeProps) {
   for (let i = 0; i <= MAN_SIZES.length; i++) {
     if (height >= MAN_SIZES[i][0] && height < MAN_SIZES[i + 1][0]) {
-      if (mass >= MAN_SIZES[i][2]) {
+      if (weight >= MAN_SIZES[i][2]) {
         return [MAN_SIZES[i + 1][3], MAN_SIZES[i + 1][4], MAN_SIZES[i + 1][5]];
       }
-      if (mass < MAN_SIZES[i][1]) {
+      if (weight < MAN_SIZES[i][1]) {
         return [MAN_SIZES[i - 1][3], MAN_SIZES[i - 1][4], MAN_SIZES[i - 1][5]];
       }
 
