@@ -1,13 +1,22 @@
-import { FC } from "react";
-import { SEX_TYPE } from "../../lib/constants/types";
-import { calculateOversize, searchMaleOversize } from "../../lib/utils";
-import { CalcOversizeProps } from "../../lib/constants/types";
+import { FC, useState } from "react";
+import { calculateOversize } from "../../lib/utils";
+import manTshirt from "../../img/man_tshirt_standard.png";
+import {
+  CalcOversizeProps,
+  MAN_DUMMY,
+  SEX_TYPE,
+  WOMAN_DUMMY,
+} from "../../lib/constants/types";
 
 export const CalcOversize: FC<CalcOversizeProps> = ({
   height,
   weight,
   sex,
 }) => {
+  // const [currentDummy, setCurrentDummy] = useState(
+  //   sex && sex === SEX_TYPE.FEMALE ? WOMAN_DUMMY.STANDARD : MAN_DUMMY.STANDARD
+  // );
+
   const calculatedSizes = calculateOversize({
     sex,
     height,
@@ -25,7 +34,9 @@ export const CalcOversize: FC<CalcOversizeProps> = ({
         <p>Overzise: {calculatedSizes[1]}</p>
         <p>Super oversize: {calculatedSizes[2]}</p>
       </div>
-      <div id="dummy-container"></div>
+      <div id="dummy-container">
+        <img src={manTshirt} alt="tshirt-dummy" />
+      </div>
     </div>
   );
 };
