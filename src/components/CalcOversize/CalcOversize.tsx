@@ -1,6 +1,6 @@
 import { FC, useState } from "react";
 import { calculateOversize } from "../../lib/utils";
-import manTshirt from "../../img/man_tshirt_standard.png";
+import manTshirt from "../../images/man_tshirt_oversize.png";
 import {
   CalcOversizeProps,
   MAN_DUMMY,

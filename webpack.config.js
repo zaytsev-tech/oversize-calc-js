@@ -23,13 +23,15 @@ module.exports = {
         exclude: /node_modules/,
       },
       {
-        test: /\.(png|jpg)?$/,
+        test: /\.(png|jpg|jpeg)?$/,
         exclude: /node_modules/,
         use: [
           {
             loader: "file-loader",
             options: {
-              outputPath: "img",
+              outputPath: "/images",
+              name: "[name].[ext]",
+              publicPath: "/",
             },
           },
         ],
