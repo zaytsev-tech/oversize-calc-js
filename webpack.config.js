@@ -27,13 +27,10 @@ module.exports = {
         exclude: /node_modules/,
         use: [
           {
-            loader: "file-loader",
-            options: {
-              outputPath: "/images",
-              name: "[name].[ext]",
-              publicPath: "/",
-            },
+            loader: "url-loader",
+            options: { limit: 800000 },
           },
+          "image-webpack-loader",
         ],
       },
     ],
