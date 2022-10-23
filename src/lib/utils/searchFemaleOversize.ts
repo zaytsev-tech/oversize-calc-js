@@ -2,7 +2,7 @@ import { WOMAN_SIZES } from "../constants/sizeArrays";
 import { CalcOversizeProps } from "../constants/types";
 
 export function searchFemaleOversize({
-  sex,
+  gender,
   height,
   weight,
 }: CalcOversizeProps) {

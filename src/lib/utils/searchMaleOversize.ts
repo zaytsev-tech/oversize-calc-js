@@ -1,7 +1,11 @@
 import { MAN_SIZES } from "../constants/sizeArrays";
 import { CalcOversizeProps } from "../constants/types";
 
-export function searchMaleOversize({ sex, height, weight }: CalcOversizeProps) {
+export function searchMaleOversize({
+  gender,
+  height,
+  weight,
+}: CalcOversizeProps) {
   for (let i = 0; i <= MAN_SIZES.length; i++) {
     if (height >= MAN_SIZES[i][0] && height < MAN_SIZES[i + 1][0]) {
       if (weight >= MAN_SIZES[i][2]) {

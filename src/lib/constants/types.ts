@@ -1,10 +1,10 @@
-export enum SEX_TYPE {
+export enum GENDER_TYPE {
   MALE = "male",
   FEMALE = "female",
 }
 
 export interface CalcOversizeProps {
-  sex?: SEX_TYPE;
+  gender: GENDER_TYPE;
   height: number;
   weight: number;
 }

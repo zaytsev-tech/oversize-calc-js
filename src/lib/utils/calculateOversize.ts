@@ -1,15 +1,15 @@
-import { CalcOversizeProps, SEX_TYPE } from "../constants/types";
+import { CalcOversizeProps, GENDER_TYPE } from "../constants/types";
 import { searchFemaleOversize } from "./searchFemaleOversize";
 import { searchMaleOversize } from "./searchMaleOversize";
 
 export function calculateOversize({
-  sex = SEX_TYPE.MALE,
+  gender = GENDER_TYPE.MALE,
   height,
   weight,
 }: CalcOversizeProps) {
-  if (sex === SEX_TYPE.FEMALE) {
-    return searchFemaleOversize({ sex, height, weight });
+  if (gender === GENDER_TYPE.FEMALE) {
+    return searchFemaleOversize({ gender, height, weight });
   } else {
-    return searchMaleOversize({ sex, height, weight });
+    return searchMaleOversize({ gender, height, weight });
   }
 }
